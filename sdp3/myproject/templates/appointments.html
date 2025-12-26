@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Appointments - HospitalMS{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>📅 Appointments</h1>
+            <a href="/add-appointment/" class="btn btn-primary">+ Schedule Appointment</a>
+        </div>
+
+        {% if appointments %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>When</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for appt in appointments %}
+                        <tr>
+                            <td>#{{ appt.id }}</td>
+                            <td>{{ appt.patient.name }}</td>
+                            <td>
+                                {% if appt.doctor %}
+                                    {{ appt.doctor.name }}
+                                {% else %}
+                                    <span class="text-muted">Unassigned</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ appt.scheduled_at }}</td>
+                            <td>{{ appt.get_status_display }}</td>
+                            <td>
+                                <a href="/delete-appointment/{{ appt.id }}/" class="btn btn-danger btn-sm" onclick="return confirm('Cancel this appointment?')">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="card text-center">
+                <div class="card-body py-5">
+                    <h2 class="card-title">No Appointments</h2>
+                    <p class="card-text text-muted mb-4">Schedule patient appointments with available doctors.</p>
+                    <a href="/add-appointment/" class="btn btn-primary">+ Schedule Appointment</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}

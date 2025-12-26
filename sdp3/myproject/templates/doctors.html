@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Doctors - HospitalMS{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>👨‍⚕️ Doctors</h1>
+            <a href="/add-doctor/" class="btn btn-primary">+ Add Doctor</a>
+        </div>
+
+        {% if doctors %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Specialty</th>
+                            <th>Contact</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for doc in doctors %}
+                        <tr>
+                            <td>#{{ doc.id }}</td>
+                            <td>{{ doc.name }}</td>
+                            <td>{{ doc.specialty }}</td>
+                            <td>{{ doc.contact }}</td>
+                            <td>
+                                <a href="/delete-doctor/{{ doc.id }}/" class="btn btn-danger btn-sm" onclick="return confirm('Delete this doctor?')">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="card text-center">
+                <div class="card-body py-5">
+                    <h2 class="card-title">No Doctors Found</h2>
+                    <p class="card-text text-muted mb-4">Add doctors to manage appointments and assignments.</p>
+                    <a href="/add-doctor/" class="btn btn-primary">+ Add Doctor</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}

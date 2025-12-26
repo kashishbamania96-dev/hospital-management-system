@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - HospitalMS{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-2">Dashboard</h1>
+        <p class="text-muted mb-5">Overview — patients, doctors and appointments</p>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">{{ patients_count }}</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Total Patients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">{{ doctors_count }}</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Doctors</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">{{ appointments_count }}</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Appointments</div>
+                    </div>
+                </div>
+            </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">+50</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Active Patients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">100%</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Data Integrity</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">24/7</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">System Running</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">✓</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">All Systems OK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+       

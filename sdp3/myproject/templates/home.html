@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - HospitalMS{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="display-3 mb-3">Welcome, {{ user.username }}! 👋</h1>
+            <p class="lead mb-4">Manage patients efficiently with HospitalMS — modern and intuitive</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap mb-4">
+            <a href="/view-patients/" class="btn btn-primary btn-lg">View Patients</a>
+            <a href="/add-patient/" class="btn btn-secondary btn-lg">Add New Patient</a>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose Our Hospital</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🧾</div>
+                            <h5 class="card-title">Patient Management</h5>
+                            <p class="card-text">Easily manage patient records, contact info, and medical history</p>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                        <h5 class="card-title">Analytics Dashboard</h5>
+                        <p class="card-text">View insights and analytics with our comprehensive dashboard interface</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                        <h5 class="card-title">Secure & Safe</h5>
+                        <p class="card-text">Your data is protected with enterprise-grade security measures</p>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">⚕️</div>
+                            <h5 class="card-title">Reliable Care</h5>
+                            <p class="card-text">Tools to help staff deliver timely and organized care</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🏥</div>
+                            <h5 class="card-title">Modern Interface</h5>
+                            <p class="card-text">Clear, accessible UI for clinical workflows</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🔁</div>
+                            <h5 class="card-title">Continuously Improved</h5>
+                            <p class="card-text">Updates and features added regularly to improve workflows</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">100+</div>
+                            <div style="color: #cbd5e1; font-weight: 500;">Patients Managed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">99.9%</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Uptime Guaranteed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">24/7</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">System Availability</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0ea5e9; margin-bottom: 0.5rem;">0%</div>
+                        <div style="color: #cbd5e1; font-weight: 500;">Data Loss</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+       
