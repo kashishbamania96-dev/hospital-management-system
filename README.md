@@ -1,34 +1,32 @@
-# 🏨 Hostel Management System
+# 🏥 Hospital Management System
 
-A Django-based web application designed to simplify hostel management by handling student records, room allocation, and administration.
+A Django-based web application designed to simplify hospital management by handling patient records, doctor information, appointments, and hospital administration.
 
 ## ✨ Features
 
-- 👤 Student Registration & Login
-- 🏠 Room Management
-- 📋 Student Records
-- 🔐 Authentication
-- 🗄 SQLite Database
+- 👤 Patient Management
+- 👨‍⚕️ Doctor Management
+- 📅 Appointment Management
+- 📊 Hospital Dashboard
+- 🔐 User Authentication
+- 🗂️ Patient and Doctor Records
+- 🏥 Hospital Administration
 
-## 🛠 Tech Stack
+## 🛠️ Technologies Used
 
 - Python
 - Django
+- SQLite
 - HTML
 - CSS
 - JavaScript
-- SQLite
 
-## 🚀 Run Locally
+## 📁 Project Structure
 
-```bash
-pip install -r requirements.txt
-python manage.py runserver
-```
-
-## 📌 Future Improvements
-
-- Fee Management
-- Admin Dashboard
-- Email Notifications
-- Online Room Booking
+```text
+sdp3/
+└── myproject/
+    ├── manage.py
+    ├── myproject/
+    ├── app/
+    └── templates/
